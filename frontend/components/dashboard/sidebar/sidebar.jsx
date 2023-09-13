@@ -115,54 +115,8 @@ export default class Sidebar extends Component {
           </div>
         </NavLink>
 
-        <div className='sidebar-break'>
-          <h6 className='silver margin-top'>Developer Links</h6>
-        </div>
 
-        <a
-          className='sidebar-link'
-          href='http://github.com/jayzizzle'
-          target='_blank'
-        >
-          <div className='sidebar-row'>
-            <div className='sidebar-left-col'>
-              <i className='fab fa-github'></i>
-            </div>
-            <div className='sidebar-center-col'>
-              <p>GitHub</p>
-            </div>
-          </div>
-        </a>
-
-        <a
-          className='sidebar-link'
-          href='https://linkedin.com/in/jon-zamora-97a8a6219/'
-          target='_blank'
-        >
-          <div className='sidebar-row'>
-            <div className='sidebar-left-col'>
-              <i className='fab fa-linkedin'></i>
-            </div>
-            <div className='sidebar-center-col'>
-              <p>LinkedIn</p>
-            </div>
-          </div>
-        </a>
-
-        <a
-          className='sidebar-link'
-          href='http://mixcloud.com/jonzamora'
-          target='_blank'
-        >
-          <div className='sidebar-row'>
-            <div className='sidebar-left-col'>
-              <i className='fas fa-headphones'></i>
-            </div>
-            <div className='sidebar-center-col'>
-              <p>Mixcloud</p>
-            </div>
-          </div>
-        </a>
+    
       </div>
     );
   }

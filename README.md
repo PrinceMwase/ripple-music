@@ -1,5 +1,6 @@
 <img src="app/assets/images/ss01.png" alt="Ripple">
 [View Ripple](https://ripple-music-jz.herokuapp.com)
+export NODE_OPTIONS=--openssl-legacy-provider
 
 # Ripple
 

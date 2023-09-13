@@ -7,7 +7,7 @@ class Splash extends React.Component {
     return (
       <>
         <header className='flex-row-between vertical-center splash'>
-          <h2>RIPPLE</h2>
+          <h2>WIMBO</h2>
           <div className='flex-row-end vertical-center'>
             <Link className='white-text-link' to='/login'>
               Log In
@@ -24,7 +24,7 @@ class Splash extends React.Component {
             <Link className='white-text-link' to='/signup'>
               <button className='hero-btn'>Start Free Trial</button>
             </Link>
-            <p>Every tidal wave starts out as a ripple.</p>
+            <p>Every tidal wave starts out as a wimbo.</p>
           </div>
         </div>
       </>

@@ -67,7 +67,7 @@ export default class SessionForm extends Component {
       <>
         <div className='flex-col-center session-form-wrapper'>
           <Link to='/'>
-            <h2 className='session-header'>RIPPLE</h2>
+            <h2 className='session-header'>WIMBO</h2>
           </Link>
           <div className='flex-row-center'>
             <NavLink
@@ -128,10 +128,10 @@ export default class SessionForm extends Component {
                 {this.renderErrors()}
               </form>
 
-              <div className='flex-col-center'>
+              {/* <div className='flex-col-center'>
                 <p>or</p>
                 <GuestLogin history={this.props.history} />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
