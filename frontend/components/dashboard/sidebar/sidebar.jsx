@@ -31,7 +31,14 @@ export default class Sidebar extends Component {
 
         <div className="sidebar-break flex-row-start">
           <div className="main-link">
+            <form action="#/search" method="get">
+
             <input type="text" name="search" id="search" style={{"backgroundColor":'transparent', "color": "white"}} />
+
+              <button type="submit" className="search-button">
+                <i className="fas fa-search"></i>
+              </button>
+            </form>
           </div>
         </div>
 

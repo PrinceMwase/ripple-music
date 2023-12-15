@@ -11,3 +11,10 @@ export const getArtist = (artistId) => {
     url: `/api/artists/${artistId}`,
   });
 };
+
+export const searchArtists = (query) => {
+  return $.ajax({
+    method: 'GET',
+    url: `/api/artists/search?search=${query}`,
+  });
+};

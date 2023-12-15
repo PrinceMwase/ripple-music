@@ -2,8 +2,8 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { Search } from './search';
 import { clearAlbums } from '../../actions/album_actions';
-import { getAllAlbums } from '../../actions/album_actions';
-import { getAllArtists } from '../../actions/artist_actions';
+import { getAllAlbums, searchAlbums } from '../../actions/album_actions';
+import { getAllArtists, searchArtists } from '../../actions/artist_actions';
 
 const mSTP = (state) => ({
   userId: state.session.id,
@@ -22,6 +22,8 @@ const mSTP = (state) => ({
 const mDTP = (dispatch) => ({
   getAllAlbums: () => dispatch(getAllAlbums()),
   getAllArtists: () => dispatch(getAllArtists()),
+  searchAlbums: (query) => dispatch(searchAlbums(query)),
+  searchArtists: (query) => dispatch(searchArtists(query)),
   clearAlbums: () => dispatch(clearAlbums()),
 });
 

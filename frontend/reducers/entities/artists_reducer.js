@@ -1,6 +1,7 @@
 import {
   RECEIVED_ALL_ARTISTS,
   RECEIVED_ARTIST,
+  RECEIVED_SEARCHED_ARTISTS
 } from '../../actions/artist_actions';
 import { RECEIVED_ALBUM } from '../../actions/album_actions';
 import { RECEIVED_ALL_FOLLOWS } from '../../actions/follow_actions';
@@ -11,6 +12,8 @@ const artistsReducer = (oldState = {}, action) => {
   const newState = Object.assign({}, oldState);
   switch (action.type) {
     case RECEIVED_ALL_ARTISTS:
+      return { ...oldState, ...action.artists };
+    case RECEIVED_SEARCHED_ARTISTS:
       return { ...oldState, ...action.artists };
     case RECEIVED_ARTIST:
       newState[action.artist.artist.id] = action.artist.artist;

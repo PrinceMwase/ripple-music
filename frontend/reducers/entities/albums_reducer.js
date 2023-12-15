@@ -1,6 +1,7 @@
 import {
   RECEIVED_ALL_ALBUMS,
   RECEIVED_ALBUM,
+  SEARCHED_ALBUMS
 } from '../../actions/album_actions';
 import { RECEIVED_ARTIST } from '../../actions/artist_actions';
 import { RECEIVED_ALL_ALBUM_LIKES } from '../../actions/like_actions';
@@ -11,6 +12,8 @@ const albumsReducer = (oldState = {}, action) => {
   const newState = Object.assign({}, oldState);
   switch (action.type) {
     case RECEIVED_ALL_ALBUMS:
+      return { ...oldState, ...action.albums };
+    case SEARCHED_ALBUMS:
       return { ...oldState, ...action.albums };
     case RECEIVED_ALBUM:
       newState[action.album.album.id] = action.album.album;

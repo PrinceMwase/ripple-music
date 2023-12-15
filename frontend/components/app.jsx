@@ -58,7 +58,6 @@ const App = () => (
         <ProtectedRoute exact path='/tracks' component={TracksContainer} />
         <ProtectedRoute exact path='/artists' component={ArtistsContainer} />
         <ProtectedRoute exact path='/explore' component={ExploreContainer} />
-        <ProtectedRoute exact path='/search' component={ExploreContainer} />
         <ProtectedRoute exact path='/search' component={SearchContainer} />
         <PlayerContainer />
       </>

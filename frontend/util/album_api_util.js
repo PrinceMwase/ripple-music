@@ -11,3 +11,10 @@ export const getAlbum = (albumId) => {
     url: `/api/albums/${albumId}`,
   });
 };
+
+export const searchAlbums = (query) => {
+  return $.ajax({
+    method: 'GET',
+    url: `/api/albums/search?search=${query}`,
+  });
+};
