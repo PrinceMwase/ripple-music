@@ -3,6 +3,14 @@ class Album < ApplicationRecord
   validates :category, inclusion: { in: ['LP', 'EP', 'Single', 'Mix'] }
   validates :is_explicit, inclusion: { in: [true, false] }
 
+  def self.search(search)
+    if search
+      where('title ILIKE ?', "%#{search}%") if search.present?
+    else
+      all
+    end
+  end
+
   belongs_to :artist,
     foreign_key: :artist_id,
     class_name: 'Artist'

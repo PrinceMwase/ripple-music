@@ -4,16 +4,26 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
 
-    resources :users, only: [:create, :show] do 
+    resources :users, only: [:create, :show] do
       resources :follows, only: [:create, :destroy, :index, :show]
       resources :album_likes, only: [:create, :destroy, :show, :index]
       resources :track_likes, only: [:create, :destroy, :show, :index]
     end
-    
+
     resource :session, only: [:create, :destroy]
 
-    resources :artists, only: [:index, :show]
-    resources :albums, only: [:index, :show]
+    resources :artists, only: [:index, :show] do
+      collection do
+        get :search
+      end
+    end
+
+    resources :albums, only: [:index, :show] do
+      collection do
+        get :search
+      end
+    end
+
     resources :tracks, only: [:index, :show]
     resources :playlists, only: [:index, :create, :show, :update, :destroy]
     resources :playlist_tracks, only: [:create, :destroy, :show]

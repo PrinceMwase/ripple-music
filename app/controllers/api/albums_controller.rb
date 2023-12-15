@@ -15,6 +15,11 @@ class Api::AlbumsController < ApplicationController
     end
   end
 
+  def search
+    @albums = Album.search(params[:search])
+    render :search
+  end
+
   def album_params
     params.require(:album).permit(:title, :artist_id, :category, :year, :is_explicit, :cover)
   end

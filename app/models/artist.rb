@@ -1,5 +1,15 @@
 class Artist < ApplicationRecord
+  has_one_attached :photo
   validates :artist_name, presence: true
+
+
+  def self.search(search)
+    if search
+      where('artist_name ILIKE ?', "%#{search}%") if search.present?
+    else
+      all
+    end
+  end
 
   has_many :albums,
     foreign_key: :artist_id,
@@ -25,5 +35,5 @@ class Artist < ApplicationRecord
     through: :listed_top_tracks,
     source: :track
 
-  has_one_attached :photo
+
 end

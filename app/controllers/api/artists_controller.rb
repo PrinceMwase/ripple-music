@@ -17,6 +17,11 @@ class Api::ArtistsController < ApplicationController
     end
   end
 
+  def search
+    @artists = Artist.search(params[:search])
+    render :search
+  end
+
   def artist_params
     params.require(:artist).permit(:artist_name, :bio, :photo)
   end

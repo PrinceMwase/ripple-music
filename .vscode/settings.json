@@ -10,6 +10,16 @@
             "name": "rails",
             "database": "music",
             "username": "postgres"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "askForPassword": true,
+            "driver": "PostgreSQL",
+            "name": "ripple_test",
+            "database": "ripple_music_test",
+            "username": "postgres"
         }
     ]
 }
