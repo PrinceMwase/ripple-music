@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
 
-// TESTING ONLY
+// TESTING ONLYY
 import { signup, login, logout } from './actions/session_actions';
 // import { getAllArtists, getArtist } from './actions/artist_actions';
 // import { getAllAlbums, getAlbum } from './actions/album_actions';

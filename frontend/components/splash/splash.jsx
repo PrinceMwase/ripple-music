@@ -1,11 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 class Splash extends React.Component {
   render() {
     return (
       <>
+        <Helmet>
+          <title>Your Page Title</title>
+          <meta name="description" content="Free Music from around the world" />
+          <link rel="manifest" href="manifest.json" />
+          {/* Add more meta tags as needed */}
+        </Helmet>
         <header className='flex-row-between vertical-center splash'>
           <h2>WIMBO</h2>
           <div className='flex-row-end vertical-center'>
@@ -37,3 +44,4 @@ const mSTP = (state) => ({
 });
 
 export default connect(mSTP)(Splash);
+

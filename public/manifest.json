@@ -1,0 +1,13 @@
+{
+    "name": "WIMBO",
+    "icons": [
+      {
+        "src": "public/favicon.ico",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "http://localhost:3000/",
+    "display" :  "fullscreen"
+  }
+  

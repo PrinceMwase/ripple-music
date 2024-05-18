@@ -1,14 +1,21 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 export default class Sidebar extends Component {
-  constructor(props) {
-    super(props);
-  }
+  state = {
+    searchBarClosed: true
+  };
 
   componentDidMount() {
     if (this.props.userId) this.props.getUser(this.props.user.id);
   }
+
+  toggleSearchBar = (event) => {
+    event.preventDefault()
+    this.setState(prevState => ({
+      searchBarClosed: !prevState.searchBarClosed
+    }));
+  };
 
   render() {
     if (!this.props.userId) return null;
@@ -33,11 +40,24 @@ export default class Sidebar extends Component {
           <div className="main-link">
             <form action="#/search" method="get">
 
-            <input type="text" name="search" id="search" style={{"backgroundColor":'transparent', "color": "white"}} />
+            <input type="text" name="search" hidden={this.state.searchBarClosed}
+ placeholder="Search" id="search" style={{"backgroundColor":'transparent', "color": "white"}} />
 
-              <button type="submit" className="search-button">
-                <i className="fas fa-search"></i>
-              </button>
+              {/* {this.state.searchBarClosed && <button className="search-button" onClick={(thisEvent) => this.toggleSearchBar(thisEvent)}>
+                <i className="fas fa-search"></i> Search
+              </button>} */}
+
+
+             {this.state.searchBarClosed &&  <button className="searchSideRow" onClick={(thisEvent) => this.toggleSearchBar(thisEvent)}>
+            <div className="flex-row-center sidebar-left-col">
+            <i className="fas fa-search"></i>
+            </div>
+            <div className="sidebar-center-col">
+              <p>Search</p>
+            </div>
+          </button>}
+
+
             </form>
           </div>
         </div>

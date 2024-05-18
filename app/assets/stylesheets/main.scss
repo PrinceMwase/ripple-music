@@ -1,6 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.searchBar{
+  width: 100%;
+  display: flex;
+  padding: 4px;
+  justify-content: flex-end;
+}
+.searchSideRow{
+  display: flex;
+    justify-content: flex-start;
+    padding: 10px 0px;
+    border-radius: 4px;
+    width: 180px;
+    color: #aaa;
+    font-size: 16px;
+}
+.searchInput{
+    width: -webkit-fill-available;
+    background-color: transparent;
+    color: white;
+    width: "100vw"
+}
+// .inputSearch{
+//   backgroundColor":'transparent';
+//    "color": "white"; 
+//    "width": "100vw"
+// }
 body {
   position: relative;
   width: 100%;

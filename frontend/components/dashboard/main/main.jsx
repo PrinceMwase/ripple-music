@@ -17,11 +17,16 @@ export const Main = (props) => {
 
   return (
     <div className='flex-row-start black-bg'>
-      <main className='flex-col-start'>
-        <div className='main-bg'></div>
+      <main className='flex-col-start '>
+        <div className='main-bg'>
+          <div >
+          
+          </div>
+          
+        </div>
         <div className='flex-col-start full-width z1'>
           <div className='full-width main-heading'>
-            <h1 className='artist-h1'>Welcome back, {props.user.username}!</h1>
+            <h1 className='artist-h1'>Welcome back!, {props.user.username}!</h1>
             <button
               className='refresh-btn hover-cyan'
               onClick={() => props.getAllFeatures()}
